@@ -11,12 +11,13 @@ fn main() {
 
 
     loop {
+        //创建一个变量 带mut的是可变， 不带mut不可变， mutate吧应该是
         let mut guess = String::new();
 
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        // match 类似于when
+        // match 类似于when， 变量可以被重新声明，，，，
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
