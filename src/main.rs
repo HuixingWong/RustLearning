@@ -6,5 +6,6 @@ use rand::Rng;
 use std::cmp::Ordering;
 
 fn main() {
-    guess_number::guessNumber()
+    // guess_number::guessNumber()
+    variables::variables()
 }
