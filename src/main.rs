@@ -10,15 +10,20 @@ fn main() {
     println!("Please input your guess.");
 
 
-
     loop {
-
         let mut guess = String::new();
 
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = guess.trim().parse().expect("Please type a number");
+        // match 类似于when
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("please input a number");
+                continue;
+            }
+        };
 
         println!("You guessed: {}", guess);
 
@@ -27,10 +32,8 @@ fn main() {
             Ordering::Greater => { println!("{} too big {} ", guess, "你猜") }
             Ordering::Equal => {
                 println!("you win");
-                break
+                break;
             }
         }
     }
-
-
 }
