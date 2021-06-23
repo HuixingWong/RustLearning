@@ -14,7 +14,7 @@ pub fn variables() {
 
     let f = 100;
     let f = "haha";
-    println!("{}", f)
+    println!("{}", f);
 
     let mut e = 100;
     // e = "hehe"  not correct

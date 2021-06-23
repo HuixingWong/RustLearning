@@ -2,7 +2,7 @@ use rand::Rng;
 use std::io;
 use std::cmp::Ordering;
 
-pub(crate) fn guessNumber() {
+pub(crate) fn guess_number() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1..101);
